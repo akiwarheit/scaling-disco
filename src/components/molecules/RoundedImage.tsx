@@ -13,6 +13,24 @@ const FadeInAndSlide = ({
   );
 };
 
+export function JustRoundedImage(
+  props: Partial<ImageProps> & {
+    thumbnailUrl: string;
+    radius?: number;
+  },
+) {
+  const { thumbnailUrl, style, radius } = props;
+
+  return (
+    <Image
+      style={[style, { borderRadius: radius }]}
+      source={{
+        uri: thumbnailUrl,
+      }}
+    />
+  );
+}
+
 export default function RoundedImage(
   props: Partial<ImageProps> & {
     thumbnailUrl: string;
