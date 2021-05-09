@@ -111,17 +111,19 @@ export default function StackFlatList<T>(props: StackFlatList<T>) {
 
             return (
               <Animated.View
-                style={{
-                  position: 'absolute',
-                  left: -itemWidth / 2,
-                  opacity,
-                  transform: [
-                    {
-                      translateX: translateX,
-                    },
-                    { scale },
-                  ],
-                }}>
+                style={[
+                  style.item,
+                  {
+                    left: -itemWidth / 2,
+                    opacity,
+                    transform: [
+                      {
+                        translateX: translateX,
+                      },
+                      { scale },
+                    ],
+                  },
+                ]}>
                 {renderItem!(g)}
               </Animated.View>
             );

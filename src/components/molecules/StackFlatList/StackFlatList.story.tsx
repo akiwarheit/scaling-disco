@@ -120,7 +120,7 @@ storiesOf('Molecules', module)
             style={{
               width: itemWidth,
               height: itemHeight,
-              backgroundColor: 'green',
+              backgroundColor: `#${randomColor()}`,
             }}>
             <Text>{item.url}</Text>
           </View>
