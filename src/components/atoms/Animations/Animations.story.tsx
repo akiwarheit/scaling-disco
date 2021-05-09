@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react-native';
 import { Text, View } from 'react-native';
-import { Animations } from './Animations';
+import { Animations } from './index';
 import { text, number } from '@storybook/addon-knobs';
 
-import CenterView from '../../../storybook/stories/CenterView';
+import CenterView from '../../../../storybook/stories/CenterView';
 
 const ViewStyle = { backgroundColor: '#006610', padding: 10 };
 const TextStyle = { color: 'white' };

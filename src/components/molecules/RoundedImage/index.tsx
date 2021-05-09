@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, ImageProps } from 'react-native';
-import { Animations } from '../atoms/Animations';
+import { Animations } from '../../atoms/Animations';
 
 const FadeInAndSlide = ({
   children,
