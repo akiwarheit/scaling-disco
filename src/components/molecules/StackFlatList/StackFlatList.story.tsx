@@ -11,80 +11,9 @@ const itemWidth = Dimensions.get('window').width * 0.85;
 const itemHeight = Dimensions.get('window').height * 0.3;
 const randomColor = () => Math.floor(Math.random() * 16777215).toString(16);
 
-const DATA = [
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-  {
-    url: `https://via.placeholder.com/300x300/${randomColor()}`,
-  },
-];
+const DATA = Array.from(Array(50).keys()).map(() => ({
+  url: `https://via.placeholder.com/300x300/${randomColor()}`,
+}));
 
 storiesOf('Molecules', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
