@@ -5,9 +5,9 @@ import {
   FlingGestureHandler,
   State,
 } from 'react-native-gesture-handler';
-import style from './StackFlatList.styles';
+import style from './FlingFlatList.styles';
 
-interface StackFlatList<T> extends FlatListProps<T> {
+interface FlingFlatList<T> extends FlatListProps<T> {
   itemWidth: number;
   visibleItems: number;
   translateXOutputs?: number[];
@@ -15,7 +15,7 @@ interface StackFlatList<T> extends FlatListProps<T> {
   opacityOutputs?: number[];
 }
 
-export default function StackFlatList<T>(props: StackFlatList<T>) {
+export default function FlingFlatList<T>(props: FlingFlatList<T>) {
   const [cIndex, setIndex] = React.useState(0);
 
   const scrollXAnimated = React.useRef(new Animated.Value(0)).current;

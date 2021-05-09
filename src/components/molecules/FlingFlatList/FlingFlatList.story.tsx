@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react-native';
 
 import CenterView from '../../../../storybook/stories/CenterView';
 import { JustRoundedImage } from '../RoundedImage';
-import StackFlatList from './index';
+import FlingFlatList from './index';
 import { Dimensions, FlatList, Text, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
@@ -17,8 +17,8 @@ const DATA = Array.from(Array(50).keys()).map(() => ({
 
 storiesOf('Molecules', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('StackFlatList#JustRoundedImage', () => (
-    <StackFlatList
+  .add('FlingFlatList#JustRoundedImage', () => (
+    <FlingFlatList
       keyExtractor={(_, idx) => `${idx}`}
       itemWidth={itemWidth}
       visibleItems={3}
@@ -37,8 +37,8 @@ storiesOf('Molecules', module)
       }}
     />
   ))
-  .add('StackFlatList#Test', () => (
-    <StackFlatList
+  .add('FlingFlatList#View', () => (
+    <FlingFlatList
       keyExtractor={(_, idx) => `${idx}`}
       itemWidth={itemWidth}
       visibleItems={3}
@@ -57,7 +57,7 @@ storiesOf('Molecules', module)
       }}
     />
   ))
-  .add('MultipleFlatList', () => {
+  .add('Multiple Flat List', () => {
     return (
       <ScrollView>
         <FlatList
@@ -78,7 +78,7 @@ storiesOf('Molecules', module)
           }}
         />
         <View style={{ height: itemHeight }}>
-          <StackFlatList
+          <FlingFlatList
             keyExtractor={(_, idx) => `${idx}`}
             itemWidth={itemWidth}
             visibleItems={3}
